@@ -128,12 +128,12 @@ async def shorten(client: Client, message: Message):
 
 
 add_command_help(
-    "cilik",
+    "nanda",
     [
         [".ping", "Ping Bot."],
         [".dc", "Dapatkan Telegram DC Anda."],
         [
-            ".cilik or .alive",
+            ".nanda or .alive",
             "Perintah ini untuk memeriksa userbot anda berfungsi atau tidak.",
         ],
         [
