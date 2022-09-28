@@ -44,7 +44,7 @@ async def nulis(client: Client, message: Message):
         bot, filter=enums.MessagesFilter.PHOTO, limit=1
     ):
         await client.send_photo(
-            chat, photo=kontol.photo.file_id, caption=f"📌 **Writing by Cilik-Ubot**"
+            chat, photo=kontol.photo.file_id, caption=f"📌 **Writing by NandaPedia-PyBot**"
         )
         await Cilik.delete()
         await kontol.delete()
