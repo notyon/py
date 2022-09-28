@@ -18,7 +18,7 @@ from config import BOT_VER
 MSG_ON = """
 ✅ **NandaPedia-Ubot Activated.**
 **🏷️ Userbot Version -** `{}`
-**Ketik** `.nandapedia` **untuk Mengecheck Bot**
+**Ketik** `.nanda` **untuk Mengecheck Bot**
 """
 
 
