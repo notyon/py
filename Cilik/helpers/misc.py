@@ -128,7 +128,9 @@ async def in_heroku():
 async def create_botlog(client):
     if HAPP is None:
         return
-    LOGGER("NandaPedia").info("TUNGGU SEBENTAR. SEDANG MEMBUAT GROUP LOG USERBOT UNTUK ANDA")
+    LOGGER("NandaPedia").info(
+        "TUNGGU SEBENTAR. SEDANG MEMBUAT GROUP LOG USERBOT UNTUK ANDA"
+    )
     desc = "Group Log untuk NandaPedia-Ubot.\n\nHARAP JANGAN KELUAR DARI GROUP INI.\n\n⚡ Powered By ~ @NandaPedia ⚡"
     try:
         gruplog = await client.create_supergroup("⚡ NandaPedia-Logs ⚡", desc)
