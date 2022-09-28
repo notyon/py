@@ -7,7 +7,7 @@ from Cilik.helpers.utility import split_list
 
 heading = "──「 **{0}** 」──\n"
 
-HELP_LOGO = "https://telegra.ph/file/47cbe59d71d4e2b8124a8.jpg"
+HELP_LOGO = "https://telegra.ph/file/8d9d5ec998234c4e43bca.jpg"
 
 
 @Client.on_message(filters.command("help", [".", "-", "^", "!", "?"]) & filters.me)
@@ -21,25 +21,33 @@ async def module_help(client: Client, message: Message):
         help_arg = message.reply_to_message.text
     elif not message.reply_to_message and len(cmd) == 1:
         all_commands = ""
-        all_commands += "Please specify which module you want help for!! \nUsage: `.help [module_name]`\n\n"
+        all_commands += "Please specify which module you want help for!! \nUsage: `.help [Nama Module]`\n\n"
 
         ac = PrettyTable()
         ac.header = False
-        ac.title = "𝗖𝗶𝗹𝗶𝗸 𝗠𝗼𝗱𝘂𝗹𝗲𝘀"
+        ac.title = "NandaPedia 𝗠𝗼𝗱𝘂𝗹𝗲𝘀"
         ac.align = "l"
 
         for x in split_list(sorted(CMD_HELP.keys()), 2):
             ac.add_row([x[0], x[1] if len(x) >= 2 else None])
 
-        text = "𝗖𝗶𝗹𝗶𝗸 𝗠𝗼𝗱𝘂𝗹𝗲𝘀 \n\n"
-        text += "🔮 𝗨𝗯𝗼𝘁: -⋟ `cilik` -⋟ `alive` -⋟ `heroku` -⋟ `system` -⋟ `update` \n\n"
-        text += "⚙️ 𝗧𝗼𝗼𝗹𝘀: -⋟ `create` -⋟ `converter` -⋟ `gcast` -⋟ `info` -⋟ `invite` -⋟ `locks` -⋟ `profile` -⋟ `parse` -⋟ `paste` -⋟ `purge` -⋟ `sangmata` -⋟ `translate` -⋟ `vctools` \n\n"
-        text += (
-            "🎈 𝗙𝘂𝗻: -⋟ `asupan` -⋟ `animasi` -⋟ `fakeaction` -⋟ `salam` -⋟ `toxic` \n\n"
-        )
-        text += "🧰 𝗢𝘁𝗵𝗲𝗿: -⋟ `admins` -⋟ `afk` -⋟ `globals` -⋟ `groups` -⋟ `google` -⋟ `join` -⋟ `logs` -⋟ `misc` -⋟ `nulis` -⋟ `spam` -⋟ `sticker` -⋟ `sosmed` -⋟ `pmpermit` -⋟ `youtube` \n\n\n"
-        text += "📮 𝗣𝗿𝗲𝗳𝗶𝘅 -⋟ `[. - ^ ! ?]`\n"
-        text += "     `.help [module_name]`\n"
+        text = "NandaPedia 𝗠𝗼𝗱𝘂𝗹𝗲𝘀 \n\n"
+        text += "♨ 𝙐𝙨𝙚𝙧𝙗𝙤𝙩 : `[nanda]` - `[alive]` - `[heroku]`\n"
+        text += "            `[system]` - `[update]`\n\n"
+        text += "♣ 𝙏𝙤𝙤𝙡𝙠𝙞𝙩𝙨  : `[create]` - `[converter]` - `[gcast]`\n"
+        text += "            `[info]` - `[invite]` - `[locks]`\n"
+        text += "            `[profile]` - `[parse]` - `[paste]`\n"
+        text += "            `[purge]` - `[sangmata]` - `[translate]`\n"
+        text += "            `[vctools]`\n\n"
+        text += "❣ 𝙁𝙪𝙣      : `[asupan]` - `[animasi]` - `[fakeaction]`\n"
+        text += "             `[salam]` - `[toxic]` \n\n"
+        text += "♞ 𝙊𝙩𝙝𝙚𝙧𝙨  : `[admins]` - `[afk]` - `[globals]`\n"
+        text += "             `[groups]` - `[google]` - `[join]`\n"
+        text += "             `[logs]` - `[misc]` - `[tulis]`\n"
+        text += "             `[spam]` - `[sticker]` - `[sosmed]`\n"
+        text += "             `[pmpermit]` - `[youtube]`\n\n"
+        text += "👀 𝙋𝙧𝙚𝙛𝙞𝙭  : `[. - ^ ! ?]`\n"
+        text += "          `  .help [Nama Module]`\n"
 
         await message.reply_photo(
             photo=HELP_LOGO,
