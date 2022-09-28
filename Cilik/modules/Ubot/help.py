@@ -34,7 +34,9 @@ async def module_help(client: Client, message: Message):
         text = "NandaPedia 𝗠𝗼𝗱𝘂𝗹𝗲𝘀 \n\n"
         text += "♨ 𝙐𝙨𝙚𝙧𝙗𝙤𝙩 : [`nanda`] [`alive`] [`heroku`] [`system`] [`update`]\n\n"
         text += "♣ 𝙏𝙤𝙤𝙡𝙠𝙞𝙩𝙨  : [`create`] [`converter`] [`gcast`] [`info`] [`invite`] [`locks`] [`profile`] [`parse`] [`paste`] [`purge`] [`sangmata`] [`translate`] [`vctools`]\n\n"
-        text += "❣ 𝙁𝙪𝙣      : [`asupan`] [`animasi`] [`fakeaction`] [`salam`] [`toxic`]\n\n"
+        text += (
+            "❣ 𝙁𝙪𝙣      : [`asupan`] [`animasi`] [`fakeaction`] [`salam`] [`toxic`]\n\n"
+        )
         text += "♞ 𝙊𝙩𝙝𝙚𝙧𝙨  : [`admins`] [`afk`] [`globals`] [`groups`] [`google`] [`join`] [`logs`] [`misc`] [`tulis`] [`spam`] [`sticker`] [`sosmed`] [`pmpermit`] [`youtube`]\n\n"
         text += "👀 𝙋𝙧𝙚𝙛𝙞𝙭  : `[. - ^ ! ?]`\n"
         text += "          `  .help [Nama Module]`\n"
