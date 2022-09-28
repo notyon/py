@@ -18,14 +18,19 @@ from Cilik.modules.Ubot.help import add_command_help
 from config import PM_AUTO_BAN
 
 DEF_UNAPPROVED_MSG = (
-    "👋🏻 Halo Kak\n\n"
-    "Disini saya menjual Produk Jasa digital seperi:\n\n"
-    "► JASA BOT TELEGRAM\n"
-    "► JASA FOLLOWERS IG, TIKTOK, SHOPPE\n"
-    "► JASA VIEW IG, TIKTOK, CH TELEGTAM dll\n"
-    "► JASA ADD MEMBER TELEGRAM\n"
-    "► NOKOS TELEGRAM ID 1, 2, 5, 7, 8, 9\n\n"
-    "Apa yang anda inginkan ???\n"
+    "╔═════════════════════╗ \n"
+    "     🚧 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 🚧 \n"
+    "╠═════════════════════╝ \n"
+    "║╠▸Saya belum menyetujui anda \n" 
+    "║║  untuk PM \n"
+    "║╠▸Jangan chat lebih dari 5x atau \n"
+    "║║  anda akan otomatis diblokir \n" 
+    "║╠▸Tunggu sampai My Boss  \n"
+    "║║  menyetujui PM Anda \n"
+    "╠═════════════════════╗ \n"
+    "           ᴘᴇsᴀɴ ᴏᴛᴏᴍᴀᴛɪs ʙʏ \n"
+    "        𝙉𝙖𝙣𝙙𝙖𝙋𝙚𝙙𝙞𝙖-𝙋𝙮𝘽𝙤𝙩 \n"
+    "╚═════════════════════╝\n"
 )
 
 
@@ -106,7 +111,7 @@ async def auto_accept(client, message):
             approve(message.chat.id)
             await client.send_message(
                 message.chat.id,
-                f"<b>Menerima Pesan!!!</b>\n{message.from_user.mention} <b>Terdeteksi Developer Cilik-Userbot</b>",
+                f"<b>Menerima Pesan!!!</b>\n{message.from_user.mention} <b>Terdeteksi Developer NandaPedia-PyBot</b>",
                 parse_mode=enums.ParseMode.HTML,
             )
         except IntegrityError:
