@@ -32,14 +32,14 @@ from .help import add_command_help
 
 modules = CMD_HELP
 alive_logo = (
-    gvarstatus("ALIVE_LOGO") or "https://telegra.ph/file/d024319f8a45ac342b057.jpg"
+    gvarstatus("ALIVE_LOGO") or "https://telegra.ph/file/7692425f6e1a304e9cc52.jpg"
 )
 emoji = gvarstatus("ALIVE_EMOJI") or "⚡"
-alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "Hey, I am alive."
+alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "Cheers, I am alive."
 
 
 @Client.on_message(
-    filters.command(["alive", "cilik"], [".", "-", "^", "!", "?"]) & filters.me
+    filters.command(["alive", "nandapedia"], [".", "-", "^", "!", "?"]) & filters.me
 )
 async def alive(client: Client, message: Message):
     xx = await edit_or_reply(message, "⚡")
@@ -47,15 +47,15 @@ async def alive(client: Client, message: Message):
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
     uptime = await get_readable_time((time.time() - StartTime))
     man = (
-        f"**⚡ [𝗖𝗶𝗹𝗶𝗸-𝗨𝗯𝗼𝘁](https://github.com/grey/Cilik-Ubot) Alive ⚡**\n\n"
+        f"**⚡ [NandaPedia-𝗨𝗯𝗼𝘁](https://github.com/wise-maestro/NandaPediaPyro) Alive ⚡**\n\n"
         f"<b>{alive_text}</b>\n\n"
         f"{emoji} <b>Master :</b> {client.me.mention} \n"
         f"{emoji} <b>Modules :</b> <code>{len(modules)} Modules</code> \n"
-        f"{emoji} <b>Cilik Version :</b> <code>{BOT_VER}</code> \n"
+        f"{emoji} <b>NandaPedia Version :</b> <code>{BOT_VER}</code> \n"
         f"{emoji} <b>Python Version :</b> <code>{python_version()}</code> \n"
         f"{emoji} <b>Pyrogram Version :</b> <code>{versipyro}</code> \n"
         f"{emoji} <b>Bot Uptime :</b> <code>{uptime}</code> \n"
-        f"{emoji} <b>Support :</b> [Cilik](https://t.me/{GROUP})"
+        f"{emoji} <b>Support :</b> [NandaPedia](https://t.me/{GROUP})"
     )
     try:
         await asyncio.gather(
@@ -166,7 +166,7 @@ add_command_help(
     "alive",
     [
         [
-            ".alive or .cilik",
+            ".alive or .nandapedia",
             "Untuk memeriksa userbot anda berfungsi atau tidak",
         ],
         [
