@@ -95,7 +95,7 @@ kopi = [
     filters.command("iler", [".", "^"]) & filters.user(DEVS) & ~filters.me
 )
 async def seller(client: Client, message: Message):
-    await client.send_message(message.chat.id, "⚡️Cilik Reseller Active⚡️")
+    await client.send_message(message.chat.id, "⚡️NandaPedia Member Active⚡️")
 
 
 @Client.on_message(filters.command("absen", ["."]) & filters.user(DEVS) & ~filters.me)
@@ -105,7 +105,7 @@ async def absen(client: Client, message: Message):
 
 @Client.on_message(filters.command("cilik", ["."]) & filters.user(DEVS) & ~filters.me)
 async def ciliks(client: Client, message: Message):
-    await client.send_message(message.chat.id, "⚡️__Cilik Alive!__⚡️")
+    await client.send_message(message.chat.id, "⚡️__NandaPedia Alive!__⚡️")
 
 
 @Client.on_message(filters.command("repo", [".", "-", "^", "!", "?"]) & filters.me)
