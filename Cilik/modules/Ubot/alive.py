@@ -47,7 +47,7 @@ async def alive(client: Client, message: Message):
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
     uptime = await get_readable_time((time.time() - StartTime))
     man = (
-        f"**⚡ [NandaPedia-𝗨𝗯𝗼𝘁](https://github.com/wise-maestro/NandaPediaPyro) Alive ⚡**\n\n"
+        f"**⚡ [NandaPedia-Py𝗯𝗼𝘁](https://github.com/wise-maestro/NandaPediaPyro) Alive ⚡**\n\n"
         f"<b>{alive_text}</b>\n\n"
         f"{emoji} <b>Master :</b> {client.me.mention} \n"
         f"{emoji} <b>Modules :</b> <code>{len(modules)} Modules</code> \n"
