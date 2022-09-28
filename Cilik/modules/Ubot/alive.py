@@ -39,7 +39,7 @@ alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "Cheers, I am alive."
 
 
 @Client.on_message(
-    filters.command(["alive", "nandapedia"], [".", "-", "^", "!", "?"]) & filters.me
+    filters.command(["alive", "nanda"], [".", "-", "^", "!", "?"]) & filters.me
 )
 async def alive(client: Client, message: Message):
     xx = await edit_or_reply(message, "⚡")
@@ -166,7 +166,7 @@ add_command_help(
     "alive",
     [
         [
-            ".alive or .nandapedia",
+            ".alive or .nanda",
             "Untuk memeriksa userbot anda berfungsi atau tidak",
         ],
         [
