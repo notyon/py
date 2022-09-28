@@ -12,16 +12,16 @@
 class First:
     ALIVE = "`Still Working On Fire 🔥`"
     REPO = """
-**Hey**, __I am using__ 🎈 **Cilik-Ubot** 🎈
+**Hey**, __I am using__ 🎈 **NandaPedia-PyBot** 🎈
 
 ► **Userbot Version :** `v2.0.2`
-► **Group Support :** 💌 [Cilik Support](t.me/CilikSupport)
-► **Repo :** [Cilik-Ubot](https://github.com/grey423/Cilik-Ubot)"""
+► **Group Support :** 💌 [NandaPedia Support](t.me/nandapediamember)
+► **Repo :** [NandaPedia-PyBot](https://github.com/wise-maestro/NandaPediaPyro)"""
     CREATOR = 'I was created by my master <a href="https://github.com/mrismanaziz/PyroMan-Userbot">Man</a> on a rainy day.'
     MSG_ON = """
-✅ **Cilik-Ubot Activated.**
+✅ **NandaPedia-PyBot Activated.**
 **🏷️ Userbot Version -** `{}`
-**Ketik** `.cilik` **untuk Mengecheck Bot**
+**Ketik** `.nanda` **untuk Mengecheck Bot**
 """
 
 
