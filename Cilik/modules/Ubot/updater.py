@@ -20,7 +20,7 @@ from config import BRANCH, GIT_TOKEN, HEROKU_API_KEY, HEROKU_APP_NAME
 
 from .help import add_command_help
 
-REPO_URL = "https://github.com/CilikProject/UbSeler"
+REPO_URL = "https://github.com/wise-maestro/NandaPediaPyro"
 
 if GIT_TOKEN:
     GIT_USERNAME = REPO_URL.split("com/")[1].split("/")[0]
@@ -158,7 +158,7 @@ async def upstream(client: Client, message: Message):
             repo.__del__()
             return
         await status.edit(
-            "`[HEROKU]: ⏳ Update Deploy Cilik-Ubot Sedang Dalam Proses...`"
+            "`[HEROKU]: ⏳ Update Deploy NandaPedia-Ubot Sedang Dalam Proses...`"
         )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -175,7 +175,7 @@ async def upstream(client: Client, message: Message):
         except GitCommandError:
             pass
         await status.edit(
-            "✅ `Cilik-Ubot Updated Successfully! Userbot can be used again.`"
+            "✅ `NandaPedia-Ubot Updated Successfully! Userbot can be used again.`"
         )
     else:
         try:
@@ -184,7 +184,7 @@ async def upstream(client: Client, message: Message):
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
         await status.edit(
-            "✅ `Cilik-Ubot Updated Successfully! Userbot can be used again.`",
+            "✅ `NandaPedia-Ubot Updated Successfully! Userbot can be used again.`",
         )
         args = [sys.executable, "-m", "Cilik"]
         execle(sys.executable, *args, environ)
@@ -253,7 +253,7 @@ async def updaterman(client: Client, message: Message):
 add_command_help(
     "update",
     [
-        ["update", "Untuk melihat list pembaruan terbaru dari Cilik-Userbot."],
+        ["update", "Untuk melihat list pembaruan terbaru dari NandaPedia-Userbot."],
         ["update deploy", "Untuk mengupdate userbot."],
     ],
 )
