@@ -48,9 +48,9 @@ async def shutdown_bot(client: Client, message: Message):
         await client.send_message(
             BOTLOG_CHATID,
             "**#SHUTDOWN** \n"
-            "**Cilik-Userbot** telah di matikan!\nJika ingin menghidupkan kembali silahkan buka heroku",
+            "**NandaPedia-Pybot** telah di matikan!\nJika ingin menghidupkan kembali silahkan buka heroku",
         )
-    await message.reply("🔌 **Cilik-Userbot Berhasil di matikan!**")
+    await message.reply("🔌 **NandaPedia-Pybot Berhasil di matikan!**")
     if HAPP is not None:
         HAPP.process_formation()["worker"].scale(0)
     else:
@@ -80,8 +80,8 @@ async def logs_ubot(client: Client, message: Message):
 add_command_help(
     "system",
     [
-        [".restart", "Untuk merestart userbot."],
-        [".shutdown or off", "Untuk mematikan userbot."],
+        [".restart", "Untuk merestart Pybot."],
+        [".shutdown or off", "Untuk mematikan Pybot."],
         [".logs", "Untuk melihat logs userbot."],
     ],
 )
