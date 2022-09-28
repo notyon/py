@@ -59,7 +59,7 @@ def install_req(cmd: str) -> Tuple[str, str, int, int]:
     return asyncio.get_event_loop().run_until_complete(install_requirements())
 
 
-CBHDSYS = "https://github.com/CilikProject/UbSeler"
+CBHDSYS = "https://github.com/wise-maestro/NandaPediaPyro"
 
 
 def git():
@@ -72,9 +72,9 @@ def git():
         UPSTREAM_REPO = REPO_URL
     try:
         repo = Repo()
-        LOGGER("Cilik").info(f"Git Client Found")
+        LOGGER("NandaPedia").info(f"Git Client Found")
     except GitCommandError:
-        LOGGER("Cilik").info(f"Invalid Git Command")
+        LOGGER("NandaPedia").info(f"Invalid Git Command")
     except InvalidGitRepositoryError:
         repo = Repo.init()
         if "origin" in repo.remotes:
@@ -99,7 +99,7 @@ def git():
         except GitCommandError:
             repo.git.reset("--hard", "FETCH_HEAD")
         install_req("pip3 install --no-cache-dir -U -r requirements.txt")
-        LOGGER("Cilik").info("Fetched Latest Updates")
+        LOGGER("NandaPedia").info("Fetched Latest Updates")
 
 
 def is_heroku():
@@ -113,7 +113,7 @@ def heroku():
             try:
                 Heroku = heroku3.from_key(HEROKU_API_KEY)
                 HAPP = Heroku.app(HEROKU_APP_NAME)
-                LOGGER("Cilik").info(f"Heroku App Configured")
+                LOGGER("NandaPedia").info(f"Heroku App Configured")
             except BaseException as e:
                 LOGGER("Heroku").error(e)
                 LOGGER("Heroku").info(
@@ -128,10 +128,10 @@ async def in_heroku():
 async def create_botlog(client):
     if HAPP is None:
         return
-    LOGGER("Cilik").info("TUNGGU SEBENTAR. SEDANG MEMBUAT GROUP LOG USERBOT UNTUK ANDA")
-    desc = "Group Log untuk Cilik-Ubot.\n\nHARAP JANGAN KELUAR DARI GROUP INI.\n\n⚡ Powered By ~ @CilikProject ⚡"
+    LOGGER("NandaPedia").info("TUNGGU SEBENTAR. SEDANG MEMBUAT GROUP LOG USERBOT UNTUK ANDA")
+    desc = "Group Log untuk NandaPedia-Ubot.\n\nHARAP JANGAN KELUAR DARI GROUP INI.\n\n⚡ Powered By ~ @NandaPedia ⚡"
     try:
-        gruplog = await client.create_supergroup("⚡ Cilik-Logs ⚡", desc)
+        gruplog = await client.create_supergroup("⚡ NandaPedia-Logs ⚡", desc)
         if await in_heroku():
             heroku_var = HAPP.config()
             heroku_var["BOTLOG_CHATID"] = gruplog.id
@@ -139,6 +139,6 @@ async def create_botlog(client):
             path = dotenv.find_dotenv("config.env")
             dotenv.set_key(path, "BOTLOG_CHATID", gruplog.id)
     except Exception:
-        LOGGER("Cilik").warning(
-            "var BOTLOG_CHATID kamu belum di isi. Buatlah grup telegram dan masukan bot @GreyCilik_bot lalu ketik /id Masukan id grup nya di var BOTLOG_CHATID"
+        LOGGER("NandaPedia").warning(
+            "var BOTLOG_CHATID kamu belum di isi. Buatlah grup telegram dan masukan bot @NandaPediaBot Dan Jadikan Admin lalu ketik /id Masukan id grup nya di var BOTLOG_CHATID"
         )
