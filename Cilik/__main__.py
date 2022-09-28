@@ -16,7 +16,7 @@ from Cilik.helpers.misc import create_botlog, git, heroku
 from config import BOT_VER
 
 MSG_ON = """
-✅ **NandaPedia-Ubot Activated.**
+✅ **NandaPedia-PyBot Activated.**
 **🏷️ Userbot Version -** `{}`
 **Ketik** `.nanda` **untuk Mengecheck Bot**
 """
@@ -39,7 +39,7 @@ async def main():
             )
         except Exception as a:
             LOGGER("main").warning(a)
-    LOGGER("NandaPedia").info(f"NandaPedia-Ubot v{BOT_VER} ⚙️[⚡ Activated ⚡]")
+    LOGGER("NandaPedia").info(f"NandaPedia-PyBot v{BOT_VER} ⚙️[⚡ Activated ⚡]")
     if bot1 and not str(BOTLOG_CHATID).startswith("-100"):
         await create_botlog(bot1)
     await idle()
@@ -47,7 +47,7 @@ async def main():
 
 
 if __name__ == "__main__":
-    LOGGER("NandaPedia").info("Starting NandaPedia-Ubot")
+    LOGGER("NandaPedia").info("Starting NandaPedia-PyBot")
     install()
     git()
     heroku()
