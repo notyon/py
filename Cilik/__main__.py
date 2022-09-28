@@ -34,7 +34,9 @@ async def main():
                 await bot.send_message(BOTLOG_CHATID, MSG_ON.format(BOT_VER))
             except BaseException:
                 pass
-            LOGGER("NandaPedia").info(f"Logged in as {bot.me.first_name} | [ {bot.me.id} ]")
+            LOGGER("NandaPedia").info(
+                f"Logged in as {bot.me.first_name} | [ {bot.me.id} ]"
+            )
         except Exception as a:
             LOGGER("main").warning(a)
     LOGGER("NandaPedia").info(f"NandaPedia-Ubot v{BOT_VER} ⚙️[⚡ Activated ⚡]")
