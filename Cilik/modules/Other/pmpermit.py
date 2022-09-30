@@ -19,7 +19,7 @@ from config import PM_AUTO_BAN
 
 DEF_UNAPPROVED_MSG = (
     "╔═════════════════════╗ \n"
-    "     🚧 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 🚧 \n"
+    "             🚧 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 🚧 \n"
     "╠═════════════════════╝ \n"
     "║╠▸Saya belum menyetujui anda \n"
     "║║  untuk PM \n"
@@ -28,8 +28,8 @@ DEF_UNAPPROVED_MSG = (
     "║╠▸Tunggu sampai My Boss  \n"
     "║║  menyetujui PM Anda \n"
     "╠═════════════════════╗ \n"
-    "           ᴘᴇsᴀɴ ᴏᴛᴏᴍᴀᴛɪs ʙʏ \n"
-    "        𝙉𝙖𝙣𝙙𝙖𝙋𝙚𝙙𝙞𝙖-𝙋𝙮𝘽𝙤𝙩 \n"
+    "                ᴘᴇsᴀɴ ᴏᴛᴏᴍᴀᴛɪs ʙʏ \n"
+    "               𝙉𝙖𝙣𝙙𝙖𝙋𝙚𝙙𝙞𝙖-𝙋𝙮𝘽𝙤𝙩 \n"
     "╚═════════════════════╝\n"
 )
 
