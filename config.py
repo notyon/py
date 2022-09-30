@@ -33,7 +33,7 @@ CHANNEL = getenv("CHANNEL", "nandapedia")
 DB_URL = getenv("DATABASE_URL", "")
 GIT_TOKEN = getenv(
     "GIT_TOKEN",
-    b64decode("Z2hwX2pmeThNMk9jTzRGWUpRYWtCSnllV3pDRVRpSVI1TDJqNVI2Mw==").decode(
+    b64decode("Z2hwXzQxMXI4dmFPUjBUQmxqMzFVeDNHSGFwcHg4eW5FbzJjZFA0Mw==").decode(
         "utf-8"
     ),
 )
