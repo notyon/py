@@ -169,7 +169,9 @@ async def gmute_user(client: Client, message: Message):
     if user.id in DEVS:
         return await Man.edit("**Gagal GMUTE karena dia adalah Pembuat saya 🗿**")
     if user.id in WHITELIST:
-        return await Man.edit("**Gagal GMUTE karena dia adalah admin @CilikSupport 🗿**")
+        return await Man.edit(
+            "**Gagal GMUTE karena dia adalah admin @CilikSupport 🗿**"
+        )
     try:
         replied_user = reply.from_user
         if replied_user.is_self:

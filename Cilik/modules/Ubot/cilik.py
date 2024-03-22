@@ -35,7 +35,9 @@ async def speed_test(client: Client, message: Message):
     )
     spd.download()
 
-    new_msg = await message.edit(f"`{new_msg.text}`\n" "📤 `Testing upload speed . . .`")
+    new_msg = await message.edit(
+        f"`{new_msg.text}`\n" "📤 `Testing upload speed . . .`"
+    )
     spd.upload()
 
     new_msg = await new_msg.edit(

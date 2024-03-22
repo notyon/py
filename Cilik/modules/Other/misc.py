@@ -92,9 +92,11 @@ async def quotly(client: Client, message: Message):
                 await message.delete()
                 await message.reply_sticker(
                     sticker=quotly.sticker.file_id,
-                    reply_to_message_id=message.reply_to_message.id
-                    if message.reply_to_message
-                    else None,
+                    reply_to_message_id=(
+                        message.reply_to_message.id
+                        if message.reply_to_message
+                        else None
+                    ),
                 )
             else:
                 return await message.edit("**Gagal Membuat Sticker Quotly**")
