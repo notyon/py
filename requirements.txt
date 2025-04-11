@@ -1,4 +1,4 @@
-APScheduler==3.11.0
+APScheduler
 Pillow
 aiohttp
 asyncio
